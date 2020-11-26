@@ -1,0 +1,341 @@
+#服务器地址
+#  @url=http://39.106.228.102
+
+
+post http://39.106.228.102/customer/addCustomer
+Accept:application/json,text/javascript, */*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "userAccount":"110000",
+    "userName":"zm",
+    "userSex":"1",
+    "phone":"145144",
+    "password":"sdjkabjd",
+    "frontScore":"500",
+    "isAdmin":"0",
+    "loginAccount":"110000"
+  
+}
+
+####
+
+
+
+### 这么奇怪吗？
+post http://39.106.228.102/customer/listCustomers
+Accept: application/json, text/javascript, */*
+Content-Type: application/json; charset=UTF-8
+
+{
+    "pageNum":"1",
+    "pageSize":"10"
+}
+
+
+
+
+### 
+post http://39.106.228.102/customer/listCustomers
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+   "pageNum":"1",
+   "pageSize":"10"
+}
+
+
+
+
+############ 组内测试
+#####注册用户
+
+post http://106.14.165.150:8083/customer/addCustomer
+Accept: application/json,text/javascript, */*
+Content-Type:application/json; charset=UTF-8
+
+{
+  "createBy": "string",
+  "createdTime": "2020-05-20T02:14:36.304Z",
+  "email": "string",
+  "frontScore": "23333",
+  "id": 0,
+  "idCard": "322333",
+  "isAdmin": 1,
+  "isDelete": 0,
+  "loginAccount": "string",
+  "pageNum": 0,
+  "pageSize": 0,
+  "password": "123456",
+  "phone": "1333333",
+  "score": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-20T02:14:36.304Z",
+  "userAccount": "MaggieK",
+  "userName": "MaggieK",
+  "userSex": 0
+}
+
+####用户登录接口
+#####
+post http://123.57.143.162:8081/customer/login
+Accept: application/json,text/javascript, */*
+Content-Type:application/json; charset=UTF-8
+
+{
+  "createBy": "string",
+  "createdTime": "2020-05-20T02:20:43.665Z",
+  "email": "string",
+  "frontScore": "string",
+  "id": 0,
+  "idCard": "string",
+  "isAdmin": 1,
+  "isDelete": 0,
+  "loginAccount": "MaggieK",
+  "pageNum": 0,
+  "pageSize": 0,
+  "password": "123456",
+  "phone": "string",
+  "score": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-20T02:20:43.665Z",
+  "userAccount": "string",
+  "userName": "string",
+  "userSex": 0
+}
+
+#####退出登录
+
+get http://31605c52v4.zicp.vip/customer/loginOut?userAccount=zck
+
+###列表插叙
+post http://31605c52v4.zicp.vip/customer/listCustomers
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+   "pageNum":"1",
+   "pageSize":"10"
+}
+
+#####用户查询
+get http://31605c52v4.zicp.vip/customer/findCustomerById?id=9
+
+####用户信息修改
+post http://31605c52v4.zicp.vip/customer/updateCustomerById
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "createBy": "string",
+  "createdTime": "2020-05-20T03:35:13.246Z",
+  "email": "string",
+  "frontScore": "99",
+  "id": 19,
+  "idCard": "string",
+  "isAdmin": 0,
+  "isDelete": 0,
+  "loginAccount": "zck",
+  "pageNum": 0,
+  "pageSize": 0,
+  "password": "string",
+  "phone": "3424244563",
+  "score": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-20T03:35:13.246Z",
+  "userAccount": "zck",
+  "userName": "zck",
+  "userSex": 0
+}
+
+#####用户信息删除
+get http://31605c52v4.zicp.vip/customer/deleteCustomerById?id=19
+
+####用户密码修改
+get http://31605c52v4.zicp.vip/customer/updatePwd?originPwd=123&newPwd=123&userId=19&userAccount=zck
+
+###轮播图新增
+post http://123.57.143.162:8081/picture/addPic
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+"picUrl":"http://q9xw70x5q.bkt.clouddn.com/1589161965570.png",
+"picStatus":"1",
+"loginAccount":"MaggieK"
+}
+
+####
+post http://123.57.143.162:8081/picture/listPic
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+    "picStatus":"1",
+    "pageNum":"1",
+    "pageSize":"10"
+}
+#### 轮播图启用、禁用、删除接口
+post http://31605c52v4.zicp.vip/picture/updatePic
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+    "picStatus":"1",
+    "loginAccount":"MaggieK",
+    "id":5
+}
+
+####全部商家查询
+
+get http://123.57.143.162:8081/goods/listBusiness
+
+####文件
+post http://31605c52v4.zicp.vip/goods/uploadImage
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+    "file":"http://q9xw70x5q.bkt.clouddn.com/1589161965570.png"
+}
+
+###商品新增接口
+post http://123.57.143.162:8081/goods/addGoods
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "businessCode": "49f17bfb900411eab7f2005056c00008",
+  "businessName": null,
+  "costPrice": 0,
+  "createdBy": null,
+  "createdTime": "2020-05-20T07:52:35.537Z",
+  "firstCateCode": "49f17bfb900411eab7f2005056c00008",
+  "firstCateName": null,
+  "frontCostPrice": "80",
+  "frontSalePrice": "70",
+  "id": 0,
+  "images": [
+    0
+  ],
+  "isDelete": 0,
+  "isbn": "1876876",
+  "loginAccount": "MaggieK",
+  "pageNum": 0,
+  "pageSize": 0,
+  "saleNum": 0,
+  "salePrice": 0,
+  "saleTime": "2020-05-20T07:52:35.538Z",
+  "secondCateCode": null,
+  "secondCateName": null,
+  "skuAd": "666",
+  "skuCode": null,
+  "skuImagesPath": null,
+  "skuIntroduction": null,
+  "skuName": "java",
+  "skuStatus": 0,
+  "skuStatusName": null,
+  "storeNum": 100,
+  "updatedBy": null,
+  "updatedTime": "2020-05-20T07:52:35.538Z"
+}
+
+###商品列表查询
+post http://123.57.143.162:8081/goods/listGoods
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "businessCode": "string",
+  "businessName": "string",
+  "costPrice": 0,
+  "createBy": "string",
+  "createdTime": "2020-05-22T12:41:36.715Z",
+  "firstCateCode": "string",
+  "firstCateName": "string",
+  "frontCostPrice": "string",
+  "frontSalePrice": "string",
+  "id": 0,
+  "images": [
+    "string"
+  ],
+  "isDelete": 0,
+  "isbn": "string",
+  "loginAccount": "string",
+  "pageNum": 1,
+  "pageSize": 10,
+  "saleNum": 0,
+  "salePrice": 0,
+  "saleTime": "2020-05-22T12:41:36.716Z",
+  "secondCateCode": "string",
+  "secondCateName": "string",
+  "skuCode": "string",
+  "skuIntroduction": "string",
+  "skuStatusName": "string",
+  "storeNum": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-22T12:41:36.716Z"
+}
+
+
+###商品详情查询
+get http://123.57.143.162:8081/goods/findGoodsBySkuCode?skuCode=2020052209203734901
+
+
+####商家详情  文档有问题
+get http://123.57.143.162:8081/goods/findBusinessByCode?businessCode=5a260ee9900411eab7f2005056c00008
+
+
+#####商品接口  文档要改
+post http://31605c52v4.zicp.vip/goods/updateGoodsInfo
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "businessCode": "5a260ee9900411eab7f2005056c00008",
+  "businessName": null,
+  "costPrice": 0,
+  "createdBy": null,
+  "createdTime": "2020-05-20T08:33:12.318Z",
+  "firstCateCode": "e4c160d28a9811eab2dd005056c00008",
+  "firstCateName": null,
+  "frontCostPrice": null,
+  "frontSalePrice": null,
+  "id": 0,
+  "images": [
+    0
+  ],
+  "isDelete": 0,
+  "isbn": "1111",
+  "loginAccount": "string",
+  "pageNum": 0,
+  "pageSize": 0,
+  "saleNum": 0,
+  "salePrice": 0,
+  "saleTime": "2020-05-20T08:33:12.318Z",
+  "secondCateCode": null,
+  "secondCateName": null,
+  "skuAd": "string",
+  "skuCode": "2020051911524525517",
+  "skuImagesPath": null,
+  "skuIntroduction": "string",
+  "skuName": "测试",
+  "skuStatus": 0,
+  "skuStatusName": null,
+  "storeNum": 50,
+  "updatedBy": null,
+  "updatedTime": "2020-05-20T08:33:12.318Z",
+  "loginAccount":"MaggieK"
+}
+
+
+###商品删除
+get http://31605c52v4.zicp.vip/goods/deleteGoods?skuCode=2020050819593486447&loginAccount=zck
+
+
+###
+
+get http://123.57.143.162:8081/goods/updateGoodStatus?skuCode=2020052020150002696&loginAccount=MaggieK&status=0
+
+

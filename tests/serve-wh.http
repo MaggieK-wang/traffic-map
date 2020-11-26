@@ -1,0 +1,299 @@
+ ####注册用户
+
+post http://xf31057711.wicp.vip/customer/addCustomer
+Accept: application/json,text/javascript, */*
+Content-Type:application/json; charset=UTF-8
+
+{
+  "createBy": "string",
+  "createdTime": "2020-05-20T02:14:36.304Z",
+  "email": "string",
+  "frontScore": "23",
+  "id": 0,
+  "idCard": "3223",
+  "isAdmin": 0,
+  "isDelete": 0,
+  "loginAccount": "string",
+  "pageNum": 0,
+  "pageSize": 0,
+  "password": "123",
+  "phone": "432242567",
+  "score": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-20T02:14:36.304Z",
+  "userAccount": "jack",
+  "userName": "jack",
+  "userSex": 0
+}
+
+####登录接口
+post http://xf31057711.wicp.vip/customer/login
+Accept: application/json,text/javascript, */*
+Content-Type:application/json; charset=UTF-8
+
+{
+  "createBy": "string",
+  "createdTime": "2020-05-20T02:20:43.665Z",
+  "email": "string",
+  "frontScore": "string",
+  "id": 0,
+  "idCard": "string",
+  "isAdmin": 0,
+  "isDelete": 0,
+  "loginAccount": "MaggieK",
+  "pageNum": 0,
+  "pageSize": 0,
+  "password": "123456",
+  "phone": "string",
+  "score": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-20T02:20:43.665Z",
+  "userAccount": "string",
+  "userName": "string",
+  "userSex": 0
+}
+
+#####退出登录
+get http://xf31057711.wicp.vip/customer/loginOut?userAccount=jack
+
+#####
+
+###列表查询
+post http://xf31057711.wicp.vip/customer/listCustomers
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+   "pageNum":"1",
+   "pageSize":"10"
+}
+#####用户查询
+get http://xf31057711.wicp.vip/customer/selectCustomerById?id=9
+
+#### 修改信息
+post http://xf31057711.wicp.vip/customer/updateCustomerById
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "createBy": "string",
+  "createdTime": "2020-05-20T03:35:13.246Z",
+  "email": "string",
+  "frontScore": "99",
+  "id": 19,
+  "idCard": "string",
+  "isAdmin": 0,
+  "isDelete": 0,
+  "loginAccount": "zck",
+  "pageNum": 0,
+  "pageSize": 0,
+  "password": "string",
+  "phone": "3424244563",
+  "score": 0,
+  "updatedBy": "string",
+  "updatedTime": "2020-05-20T03:35:13.246Z",
+  "userAccount": "zck",
+  "userName": "zck",
+  "userSex": 0
+}
+
+######删除信息
+get http://xf31057711.wicp.vip/customer/deleteCustomerById?id=19
+
+####用户密码修改
+get http://xf31057711.wicp.vip/customer/updatePwd?originPwd=123&newPwd=123&userId=19&userAccount=jack
+
+
+
+###轮播图新增
+post http://xf31057711.wicp.vip/picture/addPic
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+"picUrl":"http://q9xw70x5q.bkt.clouddn.com/1589161965570.png",
+"picStatus":"1",
+"loginAccount":"jack"
+}
+
+####
+post http://xf31057711.wicp.vip/picture/listPic
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+    "picStatus":"1",
+    "pageNum":"1",
+    "pageSize":"10"
+}
+
+#### 轮播图启用、禁用、删除接口
+post http://xf31057711.wicp.vip/picture/updatePic
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+    "picStatus":"",
+    "loginAccount":"jack",
+    "id":1
+}
+
+####全部商家查询
+
+get http://xf31057711.wicp.vip/goods/listBusiness
+
+####
+post http://xf31057711.wicp.vip/goods/uploadImage
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+    "file":""
+}
+
+###商品新增接口
+post http://xf31057711.wicp.vip/goods/addGoods
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "businessCode": "49f17bfb900411eab7f2005056c00008",
+  "businessName": null,
+  "costPrice": 0,
+  "createdBy": null,
+  "createdTime": "2020-05-20T07:52:35.537Z",
+  "firstCateCode": "49f17bfb900411eab7f2005056c00008",
+  "firstCateName": null,
+  "frontCostPrice": "80",
+  "frontSalePrice": "70",
+  "id": 0,
+  "images": [
+    0
+  ],
+  "isDelete": 0,
+  "isbn": "21312",
+  "loginAccount": "jack",
+  "pageNum": 0,
+  "pageSize": 0,
+  "saleNum": 0,
+  "salePrice": 0,
+  "saleTime": "2020-05-20T07:52:35.538Z",
+  "secondCateCode": null,
+  "secondCateName": null,
+  "skuAd": "666",
+  "skuCode": null,
+  "skuImagesPath": null,
+  "skuIntroduction": null,
+  "skuName": "软件测试",
+  "skuStatus": 0,
+  "skuStatusName": null,
+  "storeNum": 60,
+  "updatedBy": null,
+  "updatedTime": "2020-05-20T07:52:35.538Z"
+}
+
+
+###商品列表查询
+post http://xf31057711.wicp.vip/goods/listGoods
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "businessCode": null,
+  "businessName": null,
+  "costPrice": 0,
+  "createdBy": null,
+  "createdTime": "2020-05-20T08:10:00.014Z",
+  "firstCateCode": null,
+  "firstCateName": null,
+  "frontCostPrice": null,
+  "frontSalePrice": null,
+  "id": 0,
+  "images": [
+    0
+  ],
+  "isDelete": 0,
+  "isbn": null,
+  "loginAccount": null,
+  "pageNum": 1,
+  "pageSize": 3,
+  "saleNum": 0,
+  "salePrice": 0,
+  "saleTime": "2020-05-20T08:10:00.014Z",
+  "secondCateCode": null,
+  "secondCateName": null,
+  "skuAd": null,
+  "skuCode": null,
+  "skuImagesPath": null,
+  "skuIntroduction": null,
+  "skuName": null,
+  "skuStatus": 0,
+  "skuStatusName": null,
+  "storeNum": 0,
+  "updatedBy": null,
+  "updatedTime": "2020-05-20T08:10:00.014Z"
+}
+
+
+###商品详情查询
+get http://xf31057711.wicp.vip/goods/findGoodsBySkuCode?skuCode=2020052016020166641
+
+
+####商家详情
+get http://xf31057711.wicp.vip/goods/findbusinessBySkuCode?businessCode=49f17bfb900411eab7f2005056c00008
+
+
+#####商品接口
+post http://xf31057711.wicp.vip/goods/upadteGoodsInfo
+Accept: application/json, text/javascript,*/*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "businessCode": "49f17bfb900411eab7f2005056c00008",
+  "businessName": null,
+  "costPrice": 0,
+  "createdBy": null,
+  "createdTime": "2020-05-20T08:33:12.318Z",
+  "firstCateCode": "e4c160d28a9811eab2dd005056c00008",
+  "firstCateName": null,
+  "frontCostPrice": null,
+  "frontSalePrice": null,
+  "id": 0,
+  "images": [
+    0
+  ],
+  "isDelete": 0,
+  "isbn": "1111",
+  "loginAccount": "string",
+  "pageNum": 0,
+  "pageSize": 0,
+  "saleNum": 0,
+  "salePrice": 0,
+  "saleTime": "2020-05-20T08:33:12.318Z",
+  "secondCateCode": null,
+  "secondCateName": null,
+  "skuAd": "string",
+  "skuCode": "2020052016020166641",
+  "skuImagesPath": null,
+  "skuIntroduction": "string",
+  "skuName": "测试",
+  "skuStatus": 0,
+  "skuStatusName": null,
+  "storeNum": 50,
+  "updatedBy": null,
+  "updatedTime": "2020-05-20T08:33:12.318Z",
+  "loginAccount":"jack"
+}
+
+
+###商品删除
+get http://xf31057711.wicp.vip/goods/deleteGoods?skuCode=2020052016020166641&loginAccount=jack
+
+
+###
+
+get http://xf31057711.wicp.vip/goods/updateGoodsStatus?skuCode=2020051911524525517&loginAccount=jack&status=0
+
+
+
+

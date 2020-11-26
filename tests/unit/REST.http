@@ -1,0 +1,36 @@
+### app用户列表
+
+POST http://localhost:9528/dev-api/vue-admin-template/customer/listCustomers
+Accept: */*
+{
+    "userAccount":"admin",
+    "userName":"管理员",
+    "pageNum":"1",
+    "pageSize":"10"
+}
+
+
+### app用户详情
+
+POST http://localhost:9528/dev-api/vue-admin-template/customer/findCustomerById
+Accept: */*
+
+{
+    "id":"12313213213"
+}
+
+
+####order
+POST http://localhost:9528/dev-api/vue-admin-template/customer/listOrders
+Accept: */*
+
+{
+    "id":"12313213213"
+}
+###轮播图
+POST http://localhost:9528/dev-api/vue-admin-template/picture/listPic
+Accept: */*
+
+{
+    "id":"12313213213"
+}
